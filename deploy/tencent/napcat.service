@@ -1,0 +1,20 @@
+[Unit]
+Description=NapCat (QQ NT headless via Xvfb)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/Napcat
+Environment=HOME=/root
+Environment=ACCOUNT=3680764546
+Environment=NAPCAT_QUICK_PASSWORD=qhs644602
+ExecStart=/usr/bin/xvfb-run -a /root/Napcat/opt/QQ/qq --no-sandbox -q 3680764546
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=20
+LimitCORE=0
+
+[Install]
+WantedBy=multi-user.target

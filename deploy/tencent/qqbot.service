@@ -1,0 +1,19 @@
+[Unit]
+Description=QQ AI Bot (NoneBot2 + OneBot v11)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/qqbot
+Environment=PYTHONIOENCODING=utf-8
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/qqbot/.venv/bin/python bot.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/var/log/qqbot.log
+StandardError=append:/var/log/qqbot.log
+
+[Install]
+WantedBy=multi-user.target

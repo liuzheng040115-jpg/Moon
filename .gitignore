@@ -1,0 +1,30 @@
+.venv/
+.tmp*/
+.backup/
+dist/
+server.secret.md
+.pipcache/
+data/
+tools/
+__pycache__/
+*.pyc
+.env
+nonebot.log
+selftest-bot.log
+
+login-qrcode.png
+
+# 扫码截图和二维码：本地登录动作留下的临时文件，不进仓库
+assets/qr-*.png
+assets/qrcode-login.png
+assets/*qrcode*.png
+assets/login-qrcode.png
+
+# 服务器存档（含实例 ID、公网 IP）和本机调试脚本
+deploy/tencent/SERVER.md
+deploy/tencent/probe*.sh
+
+# 改代码时留下的备份
+*.bak-dsh
+*.bak-moon*
+*.bak
